@@ -1,0 +1,29 @@
+<div id="header-container" class="header-container">
+    <div id="header" class="header">
+        {{#if user}}
+            <button id="userName">{{user.userName}}</button> 
+            <form method="POST" action="/{{#if user.admin}}admins{{else}}users{{/if}}/logout">
+                <button type="submit" id="logout-button">Log-out</button>
+            </form>
+        {{else}}            
+            <form action="/book-shop{{#unless replaceSignup}}/signup{{/unless}}">
+                <button type="submit" id="signup-button">{{#if replaceSignup}}Home{{else}}Sign-up{{/if}}</button>
+            </form>
+            <form action="/book-shop{{#unless replaceLogin}}/login{{/unless}}">
+                <button type="submit" id="login-button">{{#if replaceLogin}}Home{{else}}Log-in{{/if}}</button>
+            </form>
+        {{/if}}
+        <form id="search-form">
+            <div class="search-div">
+                <input id="search-form-input" name="searchInput" type="text" placeholder="Search">
+                <ul class="search-suggestions-list">                  
+                </ul>
+            </div>            
+            <button type="submit" id="search-button">Search</button>
+        </form>
+            <form action="/book-shop{{#unless replaceCart}}/cart{{/unless}}">
+                <button type="submit" id="cart-button">{{#if replaceCart}}Home{{else}}Cart{{/if}}<span id="cartCounter"></span></button>
+            </form>
+    </div>            
+</div> 
+

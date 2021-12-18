@@ -1,0 +1,275 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #dfdac6;
+    font-family: Sans-Serif;
+}
+
+.form-container {
+    min-height: 88vh;
+    padding-top: 14vh;
+    margin: 0 auto;
+    flex-grow: 1;
+    width: 80%;        
+    display:flex;
+    justify-content: center;
+    /* height: 90vh; */
+}
+
+/* .books-container {
+    background-color: whitesmoke;
+    width: 70%;
+    margin: 12vh auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+} */
+
+.books-container {
+    padding-top: 12vh;
+    margin: 0 auto;
+    flex-grow: 1;
+    width: 80%;        
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    min-height: 90vh;
+}
+
+.cart-container {
+    width: 100vw; 
+    padding-top: 18vh; 
+    min-height: 81vh;
+}
+
+.cart-container div {
+    margin-top: 10vh;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.cart-container div img {
+    width: 97px; 
+    height: 150px; 
+    margin: 0 50px; 
+}
+
+.price-h3 {
+    min-width: 15vw; 
+    text-align: center;
+}
+
+.cart-container h2 {
+    display: block; 
+    padding-left: 20vw;
+}
+
+.cart-container span {
+    margin-top: 10vh;
+    margin-right: 20vw;
+    float: right;
+}
+
+.cart-container span h3 {
+    display: inline-flex;  
+    margin-right: 2vw;  
+}
+
+.header-container {
+    text-align: center;    
+}
+
+.header {
+    min-height: 50px;
+    position: fixed; 
+    width: 100%; 
+    height: 10vh; 
+    background-color: darkgray;
+    display: grid;
+    grid-template-columns: 1fr 1fr 4fr 1fr;
+    align-content: center;
+}
+
+#search-form-input {    
+    width: 35vw;
+    
+}
+
+.search-suggestions-list {
+    position: absolute;
+    top: 4.8vh;
+    background-color: #EEEEEE;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    padding: 0;    
+}
+
+.search-suggestions-list li {
+    width: 35vw;
+    list-style-type: none; 
+    padding-left: 4px;
+    cursor: pointer;       
+}
+
+.search-suggestions-list li:hover {
+    background-color: rgb(143, 167, 240);
+}
+
+#search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {    
+    display: inline-block;
+    border: none;
+    padding: 1rem;
+    margin: 0 1rem;
+    text-decoration: none;
+    background: #006bed;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: .1;
+    cursor: pointer;
+    text-align: center;
+    border-radius: .5rem;
+    min-width: 88px;
+}
+
+button:active {
+    background: #022d61;
+  }
+
+.bottom-div button {
+    padding: .5rem 1rem;
+    margin: 0 .2rem;
+    min-width: none;
+}
+
+.footer {
+    width: 100%; 
+    height: 18vh; 
+    background-color: darkseagreen;
+    left: 0px;
+    bottom: -18vh;
+}
+
+.book-span {
+    height: 400px; 
+    width: 260px; 
+    margin: 1vw; 
+}
+
+.book-img {
+    width: 40%;
+    max-height: 40%; 
+    float: left;    
+}
+
+.info-div {
+    width: 49%; 
+    height: 40%; 
+    float: right;
+    text-align: left;
+    padding-left: 2px;
+}
+
+.description-div {
+    height: 30%;
+    margin-top: 65%;
+}
+
+.rating-form {
+    margin-left: 2rem;
+    display: inline-flex;
+}
+
+.rate-lable {
+    font-size: 1.3rem;
+    opacity: 50%;
+    cursor: pointer;
+    padding-bottom: 3px;
+}
+
+.rate-lable:active {
+    background-color: royalblue;
+}
+
+.rating-form:hover .rate-lable {
+    opacity: 100%;
+}
+
+.rating-form.disabled {
+    pointer-events: none;
+}
+
+.rating-form .rate-lable:hover {
+    opacity: 100%;
+}
+
+.rating-form .rate-lable:hover ~ .rate-lable {
+    opacity: 50%;
+}
+
+.rating-form .rate-lable.active {
+    opacity: 100%;
+}
+
+.bottom-div {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.book-model-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    visibility: hidden;
+    opacity: 0;  
+    transition: visibility 0s, opacity 0.5s; 
+}
+
+.model-bg-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.book-model {
+    position: relative;
+    background-color: whitesmoke;
+    display: flex;
+    padding: 6vh 10vw;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.add-book-span {
+    height: 400px; 
+    width: 260px; 
+    margin: 1vw; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-model-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
